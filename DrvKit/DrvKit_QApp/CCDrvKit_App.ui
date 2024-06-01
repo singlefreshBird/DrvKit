@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CCDrvKit_AppClass</class>
+ <widget class="QWidget" name="CCDrvKit_AppClass">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>806</width>
+    <height>520</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>注射器</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>911</width>
+     <height>521</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab_normal">
+    <attribute name="title">
+     <string>常规</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>110</y>
+       <width>441</width>
+       <height>381</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>已加载的模块列表</string>
+     </property>
+     <widget class="QPushButton" name="pushButton_Existed_Unload">
+      <property name="geometry">
+       <rect>
+        <x>114</x>
+        <y>345</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>卸载模块</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_Existed_ForceUnload">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>350</y>
+        <width>87</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>强制卸载</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_Existed_Load">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>345</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>加载模块</string>
+      </property>
+     </widget>
+     <widget class="QTreeWidget" name="treeWidget_Existing_Loaded_Module">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>421</width>
+        <height>321</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <column>
+       <property name="text">
+        <string notr="true">1</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="pushButton_Existed_Inject_Code">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>345</y>
+        <width>93</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>代码注入</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>431</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>注入已存在的进程</string>
+     </property>
+     <widget class="QComboBox" name="ComboBox_ProcList">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>30</y>
+        <width>311</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>30</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>选择进程：</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_6">
+     <property name="geometry">
+      <rect>
+       <x>462</x>
+       <y>112</y>
+       <width>331</width>
+       <height>380</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>已选择模块列表</string>
+     </property>
+     <widget class="QListView" name="listView_WaitingLoadModule">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>18</y>
+        <width>311</width>
+        <height>321</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="dragDropOverwriteMode">
+       <bool>true</bool>
+      </property>
+      <property name="dragDropMode">
+       <enum>QAbstractItemView::DragDrop</enum>
+      </property>
+      <property name="defaultDropAction">
+       <enum>Qt::LinkAction</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_Creating_Remove_Module">
+      <property name="geometry">
+       <rect>
+        <x>69</x>
+        <y>344</y>
+        <width>51</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>移除</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_Creating_LoadModule">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>348</y>
+        <width>101</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>创建时注入</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_Creating_Add_Module">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>344</y>
+        <width>51</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>加入</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_Creating_Clear_Module">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>344</y>
+        <width>51</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>清空</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>20</y>
+       <width>331</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>注入新创建的进程</string>
+     </property>
+     <widget class="QTextEdit" name="textEdit_ProcFullPath">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>30</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_Choice_ProcPath">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>选择</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_lastest">
+    <attribute name="title">
+     <string>未来</string>
+    </attribute>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>60</y>
+       <width>771</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>100</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: italic 80pt &quot;Cascadia Mono&quot;;
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(9, 41, 4, 255), stop:0.085 rgba(2, 79, 0, 255), stop:0.19 rgba(50, 147, 22, 255), stop:0.275 rgba(236, 191, 49, 255), stop:0.39 rgba(243, 61, 34, 255), stop:0.555 rgba(135, 81, 60, 255), stop:0.667 rgba(121, 75, 255, 255), stop:0.825 rgba(164, 255, 244, 255), stop:0.885 rgba(104, 222, 71, 255), stop:1 rgba(93, 128, 0, 255));</string>
+     </property>
+     <property name="lineWidth">
+      <number>2</number>
+     </property>
+     <property name="text">
+      <string>敬请期待!!</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="CCDrvKit_App.qrc"/>
+ </resources>
+ <connections/>
+</ui>

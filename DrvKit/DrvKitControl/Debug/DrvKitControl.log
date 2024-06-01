@@ -1,0 +1,6 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(499,5): warning MSB8004: Output 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Output 目录。
+  CCDrvKitCtl.cpp
+D:\我的安全研究\DrvKit\DrvKit\DrvKitControl\CCDrvKitCtl.cpp(31,48): error C2660: “wcsncpy_s”: 函数不接受 3 个参数
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstring.h(54,30): message : 参见“wcsncpy_s”的声明
+D:\我的安全研究\DrvKit\DrvKit\DrvKitControl\CCDrvKitCtl.cpp(33,48): error C2660: “wcsncpy_s”: 函数不接受 3 个参数
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstring.h(54,30): message : 参见“wcsncpy_s”的声明
