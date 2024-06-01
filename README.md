@@ -10,7 +10,7 @@
 >
 > 正如你所见，该项目被命名为DrvKit，意味着后续会增加一些常见的 rookit/anti-rookit功能，不过这得看我的心情和时间安排了。
 >
-> 
+> 最低支持Win7，已在Win7 x32/64 ~ Win10 x32/x64上测试通过。
 >
 > The project has two features:
 >
@@ -19,4 +19,5 @@
 > 2. Calling any function in process on the kernel-land. Supporting known calling convention.
 >
 > As you can see, the project is named DrvKit which means some known rookit/anti-rookit features are added, but whether  these tasks can be completed depends on my mood and time schedule.
-
+>
+> Test on Win7 x32/64 ~ Win11 x64.
